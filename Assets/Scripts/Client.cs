@@ -11,7 +11,7 @@ public class Client : MonoBehaviour
     public static int dataBufferSize = 4096;
 
     public string ip = "127.0.0.1";
-    public int port = 26950;
+    public int port = 26951;
     public int myId = 0;
     public TCP tcp;
 
@@ -186,20 +186,7 @@ public class Client : MonoBehaviour
         packetHandlers = new Dictionary<int, PacketHandler>()
         {
             { (int)ServerPackets.welcome, ch.Welcome },
-            { (int)ServerPackets.name, ch.ReceivedUserInfo },
-            { (int)ServerPackets.alerts, ch.Ignore },
-            { (int)ServerPackets.FloorInfo, ch.Ignore },
-            { (int)ServerPackets.screenshot, ch.Ignore },
-            { (int)ServerPackets.playersNumber, ch.Ignore },
-            { (int)ServerPackets.TrackerId, ch.ReceivedTrackerId },
-            { (int)ServerPackets.CannonFire, ch.Ignore },
-            { (int)ServerPackets.ContentStart, ch.ContentStart },
-            { (int)ServerPackets.Language, ch.LanguageInfo },
-            { (int)ServerPackets.Mode, ch.Mode },
-            { (int)ServerPackets.Arrow, ch.Ignore },
-            { (int)ServerPackets.Shutdown, ch.Shutdown },
-            { (int)ServerPackets.videoSkip, ch.VideoSkip },
-            { (int)ServerPackets.restart, ch.Restart }
+            { (int)ServerPackets.name, ch.ReceivedUserInfo }
         };
         Debug.Log("Initializ packets.");
     }

@@ -7,40 +7,14 @@ using System.Text;
 public enum ServerPackets
 {
     welcome = 1,
-    name,
-    alerts,
-    FloorInfo,
-    screenshot,
-    playersNumber,
-    TrackerId,
-    CannonFire,
-    ContentStart,
-    Language,
-    Mode,
-    Arrow,
-    Shutdown,
-    videoSkip,
-    restart
+    name
 }
 
 /// <summary>Sent from client to server.</summary>
 public enum ClientPackets
 {
     welcomeReceived = 1,
-    sendName,
-    receivedAlerts,
-    FloorInfo,
-    screenshot,
-    playersNumber,
-    TrackerId,
-    CannonFire,
-    ContentStart,
-    Language,
-    Mode,
-    Arrow,
-    Shutdown,
-    videoSkip,
-    restart
+    sendName
 }
 
 public class Packet : IDisposable
